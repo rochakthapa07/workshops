@@ -1,17 +1,12 @@
 package week_10;
-
-
-/**
- * Write a description of class UniversityApp here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class UniversityApp
 {
     public static void main(String[] args)
     {
-        Student s1= new Student(01,"computing",1100);
+        OnlineCourse c1= new OnlineCourse(101, "Programming in Java", 12000, 5000);
+        OfflineCourse c2= new OfflineCourse(102, "Information Systems", 10000, 3000);
+        c1.displayOnlineCourseDetails();
+        c2.displayOfflineCourseDetails();
         
     }
 }

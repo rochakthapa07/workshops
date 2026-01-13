@@ -1,45 +1,37 @@
 package week_8;
-
-
-/**
- * Write a description of class BankAccount here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class BankAccount
 {
-    private String accountNumber;
-    private long balance; 
-    private String name;    
+    private int accountNumber;
+    private String name;
+    private double balance;
+    BankAccount(int accountNumber, String name, double balance)
+    {
+        this.accountNumber = accountNumber;
+        this.name = name;
+        this.balance = balance;
+    }
+        public double getBalance()
+        {
+            return balance;
+        }
+        public void deposit(double amount)
+        {
+             if (amount > 0)
+             {
+                 balance = balance + amount;
+             }
+            
+        }
+        public boolean withdraw(double amount)
+        {
+             if (amount > 0 && amount <= balance)
+             {
+            balance = balance - amount;
+            return true;
+             } else
+             {
+                 return false;
+             }
+        }
     
-    //constructor
-    public BankAccount(String acN,long balance,String Name)
-    {
-        this.accountNumber=acN;
-        this.balance=balance;
-        this.name=name;
-    }
-    
-    //setters and getters
-    public void setAccountNumber(String acN)
-    {
-        this.accountNumber=acN;
-    }
-    public String getAccountNumber()
-    {
-        
-    }
-    public void setAccountNumber(long balance)
-    {
-        this.balance=balance;
-    }
-    
-    public void setAccountNumber(String nme)
-    {
-        this.name=nme;
-    }
-}
-}
-
 }

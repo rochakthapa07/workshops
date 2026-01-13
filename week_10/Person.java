@@ -1,51 +1,46 @@
 package week_10;
-
-
-/**
- * Write a description of class Person here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Person
 {
-    private int personId;
-    private String personName;
-    
-    public Person(int personId,String personName)
+    private int id;
+    private String name;
+    private double baseSalary;
+    public Person(int id, String name, double baseSalary)
     {
-        this.personId=personId;
-        this.personName=personName;
+        this.id = id;
+        this.name = name;
+        this.baseSalary = baseSalary;
     }
-    
-    public void setPersonId(int newId)
+    public int getId()
     {
-        this.personId=newId;
+        return id;
     }
-
-    public int getPersonId()
+    public void setId(int id)
     {
-        return this.personId;
+        this.id = id;
     }
-    
-    public void setPersonName(String name)
+    public String getName()
     {
-        this.personName=name;
+        return name;
     }
-
-    public String getPersonName()
+    public void setName(String name)
     {
-        return this.personName;
+        this.name = name;
     }
-    
+    public double getBaseSalary()
+    {
+        return baseSalary;
+    }
+    public void setBaseSalary(double baseSalary)
+    {
+        this.baseSalary = baseSalary;
+    }
     public double calculateSalary()
     {
-        return 0.0;
+        return baseSalary;
     }
-    
     @Override
     public String toString()
     {
-       return "person id: " +this.getPersonId()+"person name: "+this.getPersonName(); 
+        return "ID: " + id + ", Name: " + name + ", Base Salary: " + baseSalary;
     }
 }

@@ -1,45 +1,27 @@
 package week_10;
 
-
-/**
- * Write a description of class Doctor here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
 public class Doctor extends Person
 {
     private String specialization;
-    private int consultationFee;
-    
-    public Doctor(int personId,String personName,String specialization,int consultationFee)
+    private double consultationFee;
+    public Doctor(int id, String name, double baseSalary, String specialization, double consultationFee)
     {
-        super(personId,personName);
-        this.specialization=specialization;
-        this.consultationFee=consultationFee;
+        super(id, name, baseSalary);
+        this.specialization = specialization;
+        this.consultationFee = consultationFee;
     }
-    
     @Override
     public double calculateSalary()
     {
-        double base=super.calculateSalary();
-        double finalSalary=base + (consultationFee * 30);
-        return finalSalary;
+        return super.calculateSalary() + consultationFee;
     }
-    
     public double calculateSalary(int emergencyCases)
     {
-        double normalSalary= this.calculateSalary();
-        double perEmergencyCharge=500;
-        double emergencyBonus=emergencyCases * perEmergencyCharge;
-        return normalSalary + emergencyBonus;
+         return super.calculateSalary() + consultationFee + (emergencyCases * 1000);
     }
-    
     @Override
     public String toString()
     {
-        return  super.toString()+"specialization: " +this.specialization+"person name: "+this.consultationFee; 
+        return super.toString() + ", Specialization: " + specialization + ", Consultation Fee: " + consultationFee;
     }
-    
-    
 }

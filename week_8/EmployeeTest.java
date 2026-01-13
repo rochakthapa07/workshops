@@ -11,8 +11,8 @@ public class EmployeeTest
 {
     public static void main (String[] args)
     {
-        employeeSalary es1= new employeeSalary(1000);
-        es1.displayinfo();
-        
+        employeeSalary emp= new employeeSalary(1000);
+       System.out.println("Basic Salary: Rs. " + emp.getBasicSalary());
+        System.out.println("Gross Salary: Rs. " + emp.calculateGrossSalary());
     }
 }

@@ -1,71 +1,75 @@
 package week_8;
 
+public class Student {
 
-/**
- * Write a description of class Student here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class Student
-{
-    //attributes
-    private String collegeID;
+    private String collegeId;
+    private int id;
     private String name;
     private int age;
-    
-    //constructor
-    public Student(String ID,String nme,int agee)
-    {
-        this.collegeID= ID;
-        this.name= nme;
-        this.age= agee;
+    private String address;
+    private long phoneNumber;
+
+    static String collegeName = "ABC College";
+
+    // Constructor 1
+    public Student(String collegeId, String name, int age) {
+        this.collegeId = collegeId;
+        this.name = name;
+        this.age = age;
     }
-    
-    //setters and getters
-    public void setCollegeID(String ID)
-    {
-        this.collegeID= ID;
+
+    // Constructor 2
+    public Student(int id, String name, String address, long phoneNumber) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
     }
-    
-    public String getCollegeID()
-    {
-        return this.collegeID;
+
+    // Setter and Getter for collegeId
+    public void setCollegeId(String collegeId) {
+        this.collegeId = collegeId;
     }
-    public void setName(String name)
-    {
-        this.name= name;
+
+    public String getCollegeId() {
+        return collegeId;
     }
-    
-    public String getName()
-    {
-        return this.name;
+
+    // Setter and Getter for name
+    public void setName(String name) {
+        this.name = name;
     }
-    public void setAge(int age)
-    {
-        this.age= age;
+
+    public String getName() {
+        return name;
     }
-    
-    public int getAge()
-    {
-        return this.age;
+
+    // Setter and Getter for age
+    public void setAge(int age) {
+        this.age = age;
     }
-    
-    public void display()
-    {
-        System.out.println("ID:"+this.getCollegeID());
-        System.out.println("Name:"+this.getName());
-        System.out.println("Age:"+this.getAge());
+
+    public int getAge() {
+        return age;
     }
-    
-    
-    //behaviour or methods
-    public void study()
-    {
-        System.out.println(name+" is studying");
+
+    // Display basic info
+    public void display() {
+        System.out.println("Name of the student: " + name);
+        System.out.println("College ID: " + collegeId);
+        System.out.println("Age: " + age);
     }
-    public void laugh()
-    {
-        System.out.println(name+" is laughing");
+
+    // Behaviours
+    public void study() {
+        System.out.println(name + " is studying");
+    }
+
+    public void laugh() {
+        System.out.println(name + " is laughing");
+        System.out.println("Student ID: " + id);
+        System.out.println("Address: " + address);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("College Name: " + collegeName);
     }
 }
