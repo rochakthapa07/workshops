@@ -1,4 +1,4 @@
-package Week10;
+package week_10;
 public class OnlineCourse extends Course
 {
     private double platformFee;
